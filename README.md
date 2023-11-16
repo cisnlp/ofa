@@ -2,6 +2,7 @@
 
 This is the repository for the pipeline of **O**ne **F**or **A**ll Framework, which aims to find **a good initialization of subword embeddings** when we want to adapt a monolingual or multilingual PLM to many languages. The framework optionally applies matrix factorization to the original PLM subword embeddings and replaces the new subword embeddings with two smaller matrices, which can largely reduce the number of parameters. Therefore, the OFA framework can boost efficient **large-scale multilingual continued pretraining**, which is especially helpful to a limited computation budget. Some of the code is based on [Glot500](https://github.com/cisnlp/Glot500), [WECHSEL](https://github.com/CPJKU/wechsel) and [FOCUS](https://github.com/konstantinjdobler/focus).  
 
+Paper on arXiv: https://arxiv.org/abs/2311.08849  
 
 ```
 .
