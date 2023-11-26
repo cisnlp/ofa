@@ -63,15 +63,15 @@ def load_assembled_model(base_model_type, dim, only_eng_vocab=False,
     # loading the base model
     if base_model_type == 'roberta-base':
         embedding_path += 'roberta'
-        model = AutoModelForMaskedLM.from_pretrained('roberta-base')
+        model = RobertaForMaskedLMUpdated.from_pretrained('roberta-base')
         config = RobertaConfig.from_pretrained('roberta-base')
     elif base_model_type == 'xlm-roberta-base':
         embedding_path += 'xlm'
-        model = AutoModelForMaskedLM.from_pretrained('xlm-roberta-base')
+        model = XLMRobertaForMaskedLMUpdated.from_pretrained('xlm-roberta-base')
         config = XLMRobertaConfig.from_pretrained('xlm-roberta-base')
     else:
         embedding_path += 'xlm_large'
-        model = AutoModelForMaskedLM.from_pretrained('xlm-roberta-large')
+        model = XLMRobertaForMaskedLMUpdated.from_pretrained('xlm-roberta-large')
         config = XLMRobertaConfig.from_pretrained('xlm-roberta-large')
 
     if random_initialization:
